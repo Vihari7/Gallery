@@ -3,7 +3,7 @@
 <?php
  if(isset($_POST['submit'])){
     if($_POST['title'] == '' OR $_POST['description'] == ''){
-        echo "one or more inputs are empty";
+        echo "<div class='alert-danger bg-red text-white'>one or more inputs are empty</div> '";
     }else{
         $title = $_POST['title'];
         $description = $_POST['description'];
