@@ -1,3 +1,8 @@
+<?php
+
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,18 +41,23 @@ https://templatemo.com/tm-556-catalog-z
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link nav-link-1 active" aria-current="page" href="index.php">Photos</a>
+                    <a class="nav-link nav-link-1 active" aria-current="page" href="index.php">Index</a>
+                </li>
+                <?php if(isset($_SESSION['username'])) : ?>
+                    <li class="nav-item">
+                    <a class="nav-link nav-link-1 active" aria-current="page" href=""><?php echo $_SESSION['username']; ?></a>
+                </li>
+                    <li class="nav-item">
+                    <a class="nav-link nav-link-1 active" aria-current="page" href="create.php">Create</a>
+                </li>
+                <?php else : ?>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-1 active" aria-current="page" href="register.php">Register</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-1 active" aria-current="page" href="create.php">create</a>
+                    <a class="nav-link nav-link-1 active" aria-current="page" href="login.php">Login</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-1 active" aria-current="page" href="register.php">register</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-1 active" aria-current="page" href="login.php">login</a>
-                </li>
-               
+               <?php endif; ?>
             </ul>
             </div>
         </div>
@@ -63,3 +73,6 @@ https://templatemo.com/tm-556-catalog-z
     </div>
 
     <div class="container tm-container-content tm-mt-60"></div>
+
+    </body>
+    </html>

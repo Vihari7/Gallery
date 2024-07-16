@@ -6,7 +6,7 @@
 
 
     //dbname
-    $dbname = "auth-sys";
+    $dbname = "gallery";
 
     //user
     $user = "root";

@@ -66,7 +66,7 @@
 
 <main class="form-signin w-50 m-auto">
   <form method="POST" action="login.php">
-    <h1 class="h3 mt-5 fw-normal text-center">Please login in</h1>
+    <h1 class="h3 mt-5 fw-normal text-center">Please Login </h1>
 
     <div class="form-floating">
       <label for="floatingInput">Email address</label>
@@ -78,7 +78,7 @@
       <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
     </div>
 
-    <button name="submit" class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    <button name="submit" class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
     <h6 class="mt-3">Don't have an account  <a href="register.php">Create your account</a></h6>
   </form>
 </main>
