@@ -26,7 +26,7 @@
                     </figcaption>                    
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
-                    <span class="tm-text-gray-light">18 Oct 2020</span>
+                    <span class="tm-text-gray-light"><?php echo date('M', strtotime($row->created_at)) . ',' . date('d', strtotime($row->created_at)) . ' ' . date('Y', strtotime($row->created_at)); ?></span>
                     <span><?php echo $row->user_name; ?></span>
                 </div>
             </div>
